@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <BorderPane layoutX="34.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity">
+            <bottom>
+                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="181.0" text="Buscar" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <BorderPane.margin>
+                        <Insets top="20.0" />
+                    </BorderPane.margin></Button>
+            </bottom>
+            <center>
+                <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Marca" />
+                        <ComboBox fx:id="marca" prefWidth="150.0" promptText="Selecciona...">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Samsung" />
+                                    <String fx:value="LG" />
+                                    <String fx:value="Sony" />
+                                    <String fx:value="Huawei" />
+                                    <String fx:value="Motorola" />
+                                    <String fx:value="Apple" />
+                                    <String fx:value="One Plus" />
+                                    <String fx:value="Lenovo" />
+                                    <String fx:value="Xiaomi" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Modelo" />
+                        <TextField fx:id="modelo" maxHeight="-Infinity" maxWidth="-Infinity" />
+                        <Label text="Tiendas" />
+                        <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="153.0" spacing="5.0">
+                            <children>
+                                <CheckBox fx:id="check_amazon" alignment="TOP_CENTER" mnemonicParsing="false" text="Amazon" />
+                                <CheckBox fx:id="check_fnac" alignment="TOP_CENTER" mnemonicParsing="false" text="Fnac" />
+                                <CheckBox fx:id="check_pccomponentes" alignment="TOP_CENTER" mnemonicParsing="false" text="PcComponentes" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets top="10.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </center>
+            <top>
+                <Label text="Rastreator" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>
